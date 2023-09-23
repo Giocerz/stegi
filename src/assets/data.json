@@ -1,0 +1,97 @@
+[
+    {
+        "id": 1,
+        "title": "Hanafuda Earrings",
+        "price": 21,
+        "image": "pendiente_hanafuda.jpg",
+        "category": "Earring",
+        "reviews": {
+            "number": 300,
+            "rating": 4.7
+        }
+    },
+
+    {
+        "id": 2,
+        "title": "Kazutora Earring",
+        "price": 25,
+        "image": "pendiente_kazutora_perfo.jpg",
+        "category": "Earring",
+        "reviews": {
+            "number": 100,
+            "rating": 4.3
+        }
+    },
+
+    {
+        "id": 3,
+        "title": "Kazutora Pressure Earring ",
+        "price": 25,
+        "image": "kazutora_pendiente_sinperfo.jpg",
+        "category": "Earring",
+        "reviews": {
+            "number": 100,
+            "rating": 4.3
+        }
+    },
+
+    {
+        "id": 4,
+        "title": "Shuriken Earrings",
+        "price": 17,
+        "image": "pendientes_shuriken.jpg",
+        "category": "Earring",
+        "reviews": {
+            "number": 70,
+            "rating": 4.2
+        }
+    },
+
+    {
+        "id": 5,
+        "title": "Kpop Strip Earrings",
+        "price": 8,
+        "image": "pendientes_tira.jpg",
+        "category": "Earring",
+        "reviews": {
+            "number": 400,
+            "rating": 3.8
+        }
+    },
+
+    {
+        "id": 6,
+        "title": "Kpop Chain Earrings",
+        "price": 8,
+        "image": "pendientes_cadena.jpg",
+        "category": "Earring",
+        "reviews": {
+            "number": 500,
+            "rating": 4.5
+        }
+    },
+
+    {
+        "id": 7,
+        "title": "BTS Acronym Necklace",
+        "price": 20,
+        "image": "collar_letras_bts.jpg",
+        "category": "Necklace",
+        "reviews": {
+            "number": 320,
+            "rating": 4.6
+        }
+    },
+
+    {
+        "id": 8,
+        "title": "ARMY Acronym Necklace",
+        "price": 24,
+        "image": "collar_army.jpg",
+        "category": "Necklace",
+        "reviews": {
+            "number": 452,
+            "rating": 4.7
+        }
+    }
+]
