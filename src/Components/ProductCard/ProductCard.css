@@ -1,7 +1,6 @@
-.product {
-    aspect-ratio: 2;
-    width: 100%;
-    max-width: 250px;
+.product-card {
+    width: 250px;
+    min-height: 400px;
     background-color: white;
     padding: 10px 0 10px 0;
     flex-shrink: 0;
@@ -9,7 +8,7 @@
     transition: box-shadow .3s ease;
 }
 
-.product:hover {
+.product-card:hover {
     box-shadow: 0px 0px 10px gray;
 }
 
@@ -48,10 +47,27 @@
     color: #588bbb;
     padding: 0;
     font-size: 1.7rem;
+    animation: likedEntry .3s ease;
+
 }
 
-.product img {
+@keyframes likedEntry {
+    from {
+        font-size: 2.2rem;
+    }
+    to {
+        font-size: 1.7rem;
+    }
+}
+
+.product-card img {
     width: 100%;
+}
+
+.productCard-image-skeleton {
+    aspect-ratio: 1;
+    width: 100%;
+    animation: prodCardSkeletonAnim .5s ease alternate infinite
 }
 
 .product-name {
@@ -78,8 +94,11 @@
     background-color: #cdb4db;
     border: none;
     border-radius: 10px;
-    font-size: 1.1rem;
-    font-family: Karla;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     position: relative;
     overflow: hidden;
 }

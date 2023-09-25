@@ -1,0 +1,49 @@
+.product-section {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    padding: 20px;
+}
+
+.productPage-container {
+    min-height: 80vh;
+    width: 90vw;
+    max-width: 1200px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    gap: 20px;
+    animation: entryProductContainer .3s ease-in;
+}
+
+@keyframes entryProductContainer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.productPage-header {
+    width: 100%;
+}
+.productPage-title {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+
+.productPage-info {
+    width: 100%;
+}
+
+.productPage-image {
+    width: 300px;
+}   
+
+.productPage-info aside {
+    width: 300px;
+}

@@ -1,17 +1,17 @@
 .main-container {
-    width: 90%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .slideshow {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
-  }
-  
-  .container-button {
-    position: absolute;
-    top: 0;
-  }
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.container-button {
+  position: absolute;
+  top: 0;
+}

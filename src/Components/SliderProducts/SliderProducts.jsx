@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import ProductCard from "../ProductCard/ProductCard";
+import './SliderProducts.css'
 
 function SliderProducts() {
 
@@ -26,7 +27,6 @@ function SliderProducts() {
               slideshow.current.style.transform = `translateX(0)`;
 
               slideshow.current.appendChild(firstElement);
-              slideshow.current.removeChild(firstElement);
             }
             slideshow.current.addEventListener('transitionend', transition);
         }
@@ -35,14 +35,14 @@ function SliderProducts() {
     return (
         <div className='slider-main-container'>
             <div className='slideshow' ref={slideshow}>
-                <ProductCard title={'Pendientes Hanafuda'} imgSrc={'/src/assets/hanafuda.jpg'} />
-                <ProductCard title={'Pendientes 2'} imgSrc={'/src/assets/hanafuda.jpg'} />
-                <ProductCard title={'Pendientes 3'} imgSrc={'/src/assets/hanafuda.jpg'} />
-                <ProductCard title={'Pendientes 4'} imgSrc={'/src/assets/hanafuda.jpg'} />
-                <ProductCard title={'Pendientes 5'} imgSrc={'/src/assets/hanafuda.jpg'} />
-                <ProductCard title={'Pendientes 6'} imgSrc={'/src/assets/hanafuda.jpg'} />
-                <ProductCard title={'Pendientes 7'} imgSrc={'/src/assets/hanafuda.jpg'} />
-                <ProductCard title={'Pendientes 8'} imgSrc={'/src/assets/hanafuda.jpg'} />
+                <ProductCard title={'Pendientes Hanafuda'} image={'collar_tsunade.jpg'} />
+                <ProductCard title={'Pendientes 2'} image={'collar_tsunade.jpg'} />
+                <ProductCard title={'Pendientes 3'} image={'collar_tsunade.jpg'} />
+                <ProductCard title={'Pendientes 4'} image={'collar_tsunade.jpg'} />
+                <ProductCard title={'Pendientes 5'} image={'collar_tsunade.jpg'} />
+                <ProductCard title={'Pendientes 6'} image={'collar_tsunade.jpg'} />
+                <ProductCard title={'Pendientes 7'} image={'collar_tsunade.jpg'} />
+                <ProductCard title={'Pendientes 8'} image={'collar_tsunade.jpg'} />
             </div>
             <div className='container-buttons'>
                 <button>{'<'}</button>

@@ -1,33 +1,38 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
-import ProductCard from './Components/ProductCard/ProductCard';
+import { Link, Route, Routes } from 'react-router-dom';
+import HomePage from './Components/HomePage/HomePage';
+import ProductPage from './Components/ProductPage/ProductPage';
 import SliderProducts from './Components/SliderProducts/SliderProducts';
-import data from '/src/assets/data.json'
+import Header from './Components/Header/Header';
 
 function App() {
-  console.log(data)
+  const [productData, setProductsData] = useState();
+  
+  useEffect(() => {
+    fetch('/src/assets/data.json')
+    .then((response) => response.json())
+    .then((data) => setProductsData(data))
+  }, [])
 
   return (
     <>
-      <header className='header'>
-        <img className='logo' src='src/assets/logo.png' />
-        <nav className='navigation'>
-          <ul>
-            <li><a href='#first'>HOT SALE</a><div className='line'></div></li>
-            <li><a href='#second'>NEW SALE</a><div className='line'></div></li>
-            <li><a href='#third'>EARINGS</a><div className='line'></div></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <main>
-        <section id='first' className='first' >
-          <div className='wrapper'>
-            {data && data.map((value) => {
-              return <ProductCard key={`first-${value.id}`} image={value.image} title={value.title} price={value.price} />
-            })}
-          </div>
-        </section>
+          <Routes>
+            <Route path='/product/:id' element={<ProductPage />} />
+            <Route path='/' element={<HomePage data={productData} />} />
+          </Routes>
       </main>
+      <footer className='footer'>
+        <div className='pay-container'>
+          <span>Pay methods: </span>
+          <img src='/src/assets/medios-1.png' />
+        </div>
+        <div className='footer-copy'>
+          <p>&copy; 2023. Stegi Store. All rights reserved.</p>
+        </div>
+      </footer>
     </>
   )
 }

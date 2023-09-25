@@ -1,0 +1,25 @@
+.productShowcase-wrapper {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: entryWrapper .3s ease-in;
+}
+
+@keyframes entryWrapper {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.productShowcase-wrapper::after {
+    content: '';
+    width: 250px;
+}
