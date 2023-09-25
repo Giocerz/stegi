@@ -2,96 +2,97 @@
     {
         "id": 1,
         "title": "Hanafuda Earrings",
-        "price": 21,
+        "price": 25.00,
         "image": "pendiente_hanafuda.jpg",
         "category": "Earring",
         "reviews": {
             "number": 300,
             "rating": 4.7
-        }
+        },
+        "description": "Elevate your style with these exquisite Hanafuda Earrings. Crafted with precision and featuring a unique design, these earrings are a perfect blend of elegance and tradition. Enhance your look with a touch of Japanese artistry."
     },
-
     {
         "id": 2,
         "title": "Kazutora Earring",
-        "price": 25,
+        "price": 28.00,
         "image": "pendiente_kazutora_perfo.jpg",
         "category": "Earring",
         "reviews": {
             "number": 100,
             "rating": 4.3
-        }
+        },
+        "description": "The Kazutora Earring is a statement piece that combines edgy style with a touch of sophistication. With its sleek design and exceptional craftsmanship, this earring will add a bold and distinctive flair to your outfit."
     },
-
     {
         "id": 3,
         "title": "Kazutora Pressure Earring ",
-        "price": 25,
+        "price": 28.00,
         "image": "kazutora_pendiente_sinperfo.jpg",
         "category": "Earring",
         "reviews": {
             "number": 100,
             "rating": 4.3
-        }
+        },
+        "description": "Embrace the allure of the Kazutora Pressure Earring. Its distinct design exudes confidence and style. This earring is perfect for those who seek a unique and fashionable accessory to make a statement."
     },
-
     {
         "id": 4,
         "title": "Shuriken Earrings",
-        "price": 17,
+        "price": 20.00,
         "image": "pendientes_shuriken.jpg",
         "category": "Earring",
         "reviews": {
             "number": 70,
             "rating": 4.2
-        }
+        },
+        "description": "Unleash your inner ninja with the Shuriken Earrings. These earrings are inspired by the legendary Japanese throwing stars and bring a sense of mystery and adventure to your look. Add a touch of intrigue to your style."
     },
-
     {
         "id": 5,
         "title": "Kpop Strip Earrings",
-        "price": 8,
+        "price": 10.00,
         "image": "pendientes_tira.jpg",
         "category": "Earring",
         "reviews": {
             "number": 400,
             "rating": 3.8
-        }
+        },
+        "description": "Get ready to shine with the Kpop Strip Earrings. These eye-catching earrings are a must-have for K-pop enthusiasts. Their vibrant design adds a playful and trendy element to your outfit."
     },
-
     {
         "id": 6,
         "title": "Kpop Chain Earrings",
-        "price": 8,
+        "price": 10.00,
         "image": "pendientes_cadena.jpg",
         "category": "Earring",
         "reviews": {
             "number": 500,
             "rating": 4.5
-        }
+        },
+        "description": "Make a bold fashion statement with the Kpop Chain Earrings. These earrings are a fusion of chic and contemporary style, making them the perfect accessory for fans of K-pop culture."
     },
-
     {
         "id": 7,
         "title": "BTS Acronym Necklace",
-        "price": 20,
+        "price": 22.00,
         "image": "collar_letras_bts.jpg",
         "category": "Necklace",
         "reviews": {
             "number": 320,
             "rating": 4.6
-        }
+        },
+        "description": "Show your support for BTS in style with the BTS Acronym Necklace. This necklace features the iconic acronym in an elegant design. It's a fashionable way to express your admiration for the global music sensation."
     },
-
     {
         "id": 8,
         "title": "ARMY Acronym Necklace",
-        "price": 24,
+        "price": 26.00,
         "image": "collar_army.jpg",
         "category": "Necklace",
         "reviews": {
             "number": 452,
             "rating": 4.7
-        }
+        },
+        "description": "The ARMY Acronym Necklace is a must-have for fans of BTS. It proudly displays the ARMY logo, symbolizing your loyalty and dedication. This necklace is not just an accessory; it's a statement of fandom pride."
     }
 ]

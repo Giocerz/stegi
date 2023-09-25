@@ -6,8 +6,8 @@
 }
 
 .productPage-container {
+    padding: 20px;
     min-height: 80vh;
-    width: 90vw;
     max-width: 1200px;
     background-color: white;
     display: flex;
@@ -27,9 +27,6 @@
     }
 }
 
-.productPage-header {
-    width: 100%;
-}
 .productPage-title {
     margin: 0;
     padding: 0;
@@ -37,13 +34,30 @@
 }
 
 .productPage-info {
-    width: 100%;
+    min-width: 300px;
+    width: 20vw;
 }
 
 .productPage-image {
     width: 300px;
 }   
 
-.productPage-info aside {
+.productPage-info {
     width: 300px;
+}
+
+.productPage-title {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.productPage-price {
+    font-size: 3em;
+    color: #7B4997;
+}
+
+.productPageInfo-btnContainer {
+    width: 100%;
+    display: flex;
+    gap: 5px;
 }

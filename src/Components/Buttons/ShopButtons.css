@@ -1,0 +1,40 @@
+.shopbuttons-btn {
+    aspect-ratio: 3.5;
+    width: 50%;
+    background-color: #cdb4db;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.shopbuttons-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 900px;
+    top: -200px;
+    left: -200px;
+    background-color: #b388eb;
+    position: absolute;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+
+.shopbuttons-text {
+    position: relative;
+    z-index: 2;
+}
+
+.shopbuttons-btn:hover .shopbuttons-circle {
+    left: -20px;
+    top: -50px;
+}
+
+.shopbuttons-btn.large {
+    width: 70%;
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './ProductCard.css'
 import { Link } from 'react-router-dom';
+import { ShopLinks } from '../Buttons/ShopButtons';
 
 function ProductCard({ id, image, title, price }) {
     const [like, setLike] = useState(false);
@@ -39,10 +40,9 @@ function ProductCard({ id, image, title, price }) {
             <footer className='product-info'>
                 <h4 className='product-name'>{title}</h4>
                 <span className='product-price'>${price}</span>
-                <Link className='buy-btn' to={`/product/${id}`}>
-                    <div className='btn-circle'></div>
-                    <span className='btn-text'>See more</span>
-                </Link>
+                <ShopLinks size='large' toLink={`/product/${id}`}>
+                    See more
+                </ShopLinks>
             </footer>
         </article>
     )
