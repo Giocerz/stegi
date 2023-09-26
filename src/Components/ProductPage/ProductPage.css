@@ -76,3 +76,18 @@
     display: flex;
     gap: 5px;
 }
+
+.reviewsBox {
+    display: flex;
+    align-items: center;
+}
+
+.reviewsBox span {
+    display: flex;
+    align-items: center;
+}
+
+.reviewsBox-stars {
+    color: #588bbb;
+    font-size: 1.3rem;
+}

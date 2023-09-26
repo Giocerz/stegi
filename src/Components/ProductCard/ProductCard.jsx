@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './ProductCard.css'
-import { Link } from 'react-router-dom';
 import { ShopLinks } from '../Buttons/ShopButtons';
+import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 
 function ProductCard({ id, image, title, price }) {
     const [like, setLike] = useState(false);
@@ -22,9 +22,9 @@ function ProductCard({ id, image, title, price }) {
                     {
                         like
                             ?
-                            <span className="material-symbols-outlined liked">favorite</span>
+                            <span className='liked'><MdFavorite /></span>
                             :
-                            <span className="material-symbols-outlined unliked">favorite</span>
+                            <span className='unliked'><MdFavoriteBorder /></span>
                     }
                 </button>
                 <div className='product-image-container'>

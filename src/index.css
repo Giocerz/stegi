@@ -15,6 +15,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: #FFC8DD;
+  font-size: 1.1em;
 }
 
 button {

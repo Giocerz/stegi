@@ -27,28 +27,14 @@
     color: black;
 }
 
-.unliked {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
+.liked, .unliked {
     color: #588bbb;
     padding: 0;
     font-size: 1.7rem;
 }
 
 .liked {
-    font-variation-settings:
-        'FILL' 1,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-    color: #588bbb;
-    padding: 0;
-    font-size: 1.7rem;
     animation: likedEntry .3s ease;
-
 }
 
 @keyframes likedEntry {
