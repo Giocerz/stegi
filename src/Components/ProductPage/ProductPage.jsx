@@ -27,10 +27,14 @@ function ProductPage() {
                     <h1 className="productPage-title">{productData?.title}</h1>
                     <span className='reviews'></span>
                     <span className='productPage-price'>{`$ ${productData?.price}`}</span>
+                    <section className='productPage-ship'>
+                        <span>Arrives tomorrow</span>
+                        <a href=''>More delivery methods</a>
+                    </section>
                     <p className='productPage-description'>{productData?.description}</p>
-                    <div className='productPage-quantity'>
+                    <section className='productPage-quantity'>
                         <label htmlFor="quantity">Quantity: </label>
-                        <select id="quantity">
+                        <select id="quantity" className='productPage-quantity'>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -38,11 +42,11 @@ function ProductPage() {
                             <option>5</option>
                             <option>6</option>
                         </select>
-                    </div>
-                    <div className='productPageInfo-btnContainer'>
+                    </section>
+                    <section className='productPageInfo-btnContainer'>
                         <ShopButtons>Buy</ShopButtons>
                         <ShopButtons>Add to cart</ShopButtons>
-                    </div>
+                    </section>
                 </article>
             </div>
         </section>

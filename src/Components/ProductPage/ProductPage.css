@@ -44,16 +44,31 @@
 
 .productPage-info {
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .productPage-title {
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(174, 174, 174);
+    padding-bottom: 5px;
 }
 
 .productPage-price {
     font-size: 3em;
     color: #7B4997;
+}
+
+.productPage-ship {
+    width: 100%;
+    display: grid;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgb(174, 174, 174);
+}
+
+.productPage-description {
+    margin: 0;
 }
 
 .productPageInfo-btnContainer {

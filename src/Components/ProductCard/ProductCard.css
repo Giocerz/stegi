@@ -60,7 +60,12 @@
     }
 }
 
-.product-card img {
+.product-image-container {
+    width: 250px;
+    height: 250px;
+}
+
+.product-image-container img {
     width: 100%;
 }
 
