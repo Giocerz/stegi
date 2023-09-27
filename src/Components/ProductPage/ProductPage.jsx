@@ -3,7 +3,7 @@ import '../ProductsShowcase/ProductShowcase.css'
 import './ProductPage.css'
 import { useEffect, useState } from "react";
 import { ShopButtons } from "../Buttons/ShopButtons";
-import { MdStar, MdStarHalf, MdStarBorder, MdArrowDownward} from "react-icons/md";
+import { MdStar, MdStarHalf, MdStarBorder, MdArrowDownward, MdRocketLaunch} from "react-icons/md";
 
 const ReviewBox = ({ rate, numberReviews }) => {
     const [stars, setStars] = useState([]);
@@ -49,6 +49,14 @@ function ProductPage() {
             })
     }, [])
 
+    useEffect(() => {
+        document.title = `Stegi Store • ${productData?.title}`
+
+        return () => {
+            document.title = 'Stegi Store'
+        }
+    }, [productData])
+
     return (
         <section className='product-section'>
             <div className='productPage-container'>
@@ -60,7 +68,7 @@ function ProductPage() {
                     <ReviewBox rate={productData?.reviews.rating} numberReviews={productData?.reviews.number} />
                     <span className='productPage-price'>{`$ ${productData?.price}`}</span>
                     <section className='productPage-ship'>
-                        <span>Arrives tomorrow</span>
+                        <span>Arrives tomorrow <MdRocketLaunch style={{color: '#588bbb'}}/></span>
                         <a href=''>More delivery methods</a>
                     </section>
                     <p className='productPage-description'>{productData?.description}</p>

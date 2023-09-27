@@ -1,4 +1,5 @@
 .productShowcase-wrapper {
+    width: 80vw;
     max-width: 1200px;
     display: flex;
     align-items: center;

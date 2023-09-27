@@ -5,6 +5,7 @@ import HomePage from './Components/HomePage/HomePage';
 import ProductPage from './Components/ProductPage/ProductPage';
 import SliderProducts from './Components/SliderProducts/SliderProducts';
 import Header from './Components/Header/Header';
+import CartPage from './Components/CartPage/CartPage';
 
 function App() {
   const [productData, setProductsData] = useState();
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <main>
           <Routes>
+            <Route path='/cart' element={<CartPage/>} />
             <Route path='/product/:id' element={<ProductPage />} />
             <Route path='/' element={<HomePage data={productData} />} />
           </Routes>
