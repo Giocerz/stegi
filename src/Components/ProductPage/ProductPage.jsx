@@ -4,6 +4,7 @@ import './ProductPage.css'
 import { useEffect, useState } from "react";
 import { ShopButtons } from "../Buttons/ShopButtons";
 import { MdStar, MdStarHalf, MdStarBorder, MdArrowDownward, MdRocketLaunch} from "react-icons/md";
+import { useCart } from "../../Hooks/useCart";
 
 const ReviewBox = ({ rate, numberReviews }) => {
     const [stars, setStars] = useState([]);
@@ -40,6 +41,7 @@ function ProductPage() {
     const params = useParams();
     const [productData, setProductData] = useState();
     const [rotateSelectArrow, setRotateSelectArrow] = useState('');
+    const { addToCart } = useCart();
 
     useEffect(() => {
         fetch('/src/assets/data.json')
@@ -56,6 +58,17 @@ function ProductPage() {
             document.title = 'Stegi Store'
         }
     }, [productData])
+
+    const handleAddToCart = () => {
+        if(productData) {
+            addToCart({
+                id: productData.id,
+                title: productData.title,
+                price: productData.price
+            })
+            alert('Added to cart');
+        }
+    }
 
     return (
         <section className='product-section'>
@@ -88,7 +101,7 @@ function ProductPage() {
                     </section>
                     <section className='productPageInfo-btnContainer'>
                         <ShopButtons>Buy</ShopButtons>
-                        <ShopButtons>Add to cart</ShopButtons>
+                        <ShopButtons onClick={handleAddToCart}>Add to cart</ShopButtons>
                     </section>
                 </article>
             </div>

@@ -6,25 +6,28 @@ import ProductPage from './Components/ProductPage/ProductPage';
 import SliderProducts from './Components/SliderProducts/SliderProducts';
 import Header from './Components/Header/Header';
 import CartPage from './Components/CartPage/CartPage';
+import CartProvider from './Hooks/CartProvider';
 
 function App() {
   const [productData, setProductsData] = useState();
-  
+
   useEffect(() => {
     fetch('/src/assets/data.json')
-    .then((response) => response.json())
-    .then((data) => setProductsData(data))
+      .then((response) => response.json())
+      .then((data) => setProductsData(data))
   }, [])
 
   return (
     <>
       <Header />
       <main>
+        <CartProvider>
           <Routes>
-            <Route path='/cart' element={<CartPage/>} />
+            <Route path='/cart' element={<CartPage />} />
             <Route path='/product/:id' element={<ProductPage />} />
             <Route path='/' element={<HomePage data={productData} />} />
           </Routes>
+        </CartProvider>
       </main>
       <footer className='footer'>
         <div className='pay-container'>
