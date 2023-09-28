@@ -40,6 +40,7 @@ const ReviewBox = ({ rate, numberReviews }) => {
 function ProductPage() {
     const params = useParams();
     const [productData, setProductData] = useState();
+    const [selectedQuantity, setSelectedQuantity] = useState('1');
     const [rotateSelectArrow, setRotateSelectArrow] = useState('');
     const { addToCart } = useCart();
 
@@ -64,10 +65,16 @@ function ProductPage() {
             addToCart({
                 id: productData.id,
                 title: productData.title,
-                price: productData.price
+                price: productData.price,
+                image: productData.image,
+                quantity: parseInt(selectedQuantity)
             })
             alert('Added to cart');
         }
+    }
+
+    const handleSelectQuantity = (event) => {
+        setSelectedQuantity(event.target.value);
     }
 
     return (
@@ -88,9 +95,9 @@ function ProductPage() {
                     <section className='productPage-quantity'>
                         <label htmlFor="quantity">Quantity: </label>
                         <div className='productPage-quantity-select'>
-                            <select id="quantity" onFocus={() =>  setRotateSelectArrow('rotate')} onBlur={() => setRotateSelectArrow('')}>
+                            <select id="quantity" value={selectedQuantity} onChange={handleSelectQuantity} onFocus={() =>  setRotateSelectArrow('rotate')} onBlur={() => setRotateSelectArrow('')}>
                                 <option value='1'>1</option>
-                                <option value='1'>2</option>
+                                <option value='2'>2</option>
                                 <option value='3'>3</option>
                                 <option value='4'>4</option>
                                 <option value='5'>5</option>

@@ -5,8 +5,15 @@ function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
 
     const addToCart = (item) => {
-        if(cart.some((cartItem) => cartItem.id === item.id)) return;
-        setCart([...cart, item]);
+        const existingItemIndex = cart.findIndex((cartItem) => cartItem.id === item.id);
+
+        if (existingItemIndex !== -1) {
+            const newCart = [...cart];
+            newCart[existingItemIndex].quantity += item.quantity;
+            setCart(newCart);
+        } else {
+            setCart([...cart, item]);
+        }
     }
 
     const removeToCart = (item) => {
@@ -14,8 +21,8 @@ function CartProvider({ children }) {
         setCart(updateCart);
     }
 
-    return(
-        <CartContext.Provider value={{cart, addToCart, removeToCart}} >
+    return (
+        <CartContext.Provider value={{ cart, addToCart, removeToCart }} >
             {children}
         </CartContext.Provider>
     )

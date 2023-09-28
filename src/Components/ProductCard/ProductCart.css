@@ -1,0 +1,27 @@
+.productCart {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid rgb(174, 174, 174);
+}
+
+.productCart-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.productCart-header h3 {
+    padding: 0;
+    margin: 0;
+    width: 10rem;
+}
+
+.productCart-image {
+    width: 90px;
+}
+
+.productCart-panel {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
