@@ -12,7 +12,7 @@ export function ShopButtons({ children, onClick, size = '' }) {
 
 export function ShopLinks({ children, size = '', toLink }) {
     return (
-        <Link className={`shopbuttons-btn ${size}`} to={toLink}>
+        <Link className={`shopbuttons-link ${size}`} to={toLink}>
             <div className='shopbuttons-circle'></div>
             <span className='shopbuttons-text'>{children}</span>
         </Link>

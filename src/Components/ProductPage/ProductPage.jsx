@@ -95,7 +95,7 @@ function ProductPage() {
                     <section className='productPage-quantity'>
                         <label htmlFor="quantity">Quantity: </label>
                         <div className='productPage-quantity-select'>
-                            <select id="quantity" value={selectedQuantity} onChange={handleSelectQuantity} onFocus={() =>  setRotateSelectArrow('rotate')} onBlur={() => setRotateSelectArrow('')}>
+                            <select id="quantity" value={selectedQuantity} onChange={handleSelectQuantity} onClick={() =>  setRotateSelectArrow('rotate')} onBlur={() => setRotateSelectArrow('')}>
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
                                 <option value='3'>3</option>

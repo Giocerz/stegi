@@ -1,4 +1,4 @@
-.shopbuttons-btn {
+.shopbuttons-btn, .shopbuttons-link {
     aspect-ratio: 3.5;
     width: 50%;
     background-color: #cdb4db;
@@ -11,6 +11,7 @@
     text-decoration: none;
     position: relative;
     overflow: hidden;
+    color: black;
 }
 
 .shopbuttons-circle {
@@ -35,6 +36,11 @@
     top: -50px;
 }
 
-.shopbuttons-btn.large {
+.shopbuttons-link:hover .shopbuttons-circle {
+    left: -20px;
+    top: -50px;
+}
+
+.shopbuttons-btn.large, .shopbuttons-link.large {
     width: 70%;
 }
