@@ -23,5 +23,9 @@
 .productCart-panel {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+}
+
+.productCart-details {
+    display: flex;
+    flex-direction: column;
 }

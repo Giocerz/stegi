@@ -1,22 +1,25 @@
-import { ShopButtons } from '../Buttons/ShopButtons';
+import { ShopButtons, ShopModifyButtons } from '../Buttons/ShopButtons';
 import './ProductCart.css'
 import { Link } from 'react-router-dom'
+import { MdDeleteForever } from "react-icons/md";
 
 function ProductCart({ data, removeToCart }) {
     const handleRemove = () => {
         removeToCart(data);
     }
 
-    return(
+    return (
         <article className='productCart'>
             <header className='productCart-header'>
-                <img className='productCart-image' src={`/src/assets/product_images/${data?.image}`}/>
-                <Link style={{color: 'black', textDecoration: 'none'}} to={`/product/${data?.id}`}><h3>{data?.title}</h3></Link>
+                <img alt={data?.description} className='productCart-image' src={`/src/assets/product_images/${data?.image}`} />
+                <div className='productCart-details'>
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to={`/product/${data?.id}`}><h3>{data?.title}</h3></Link>
+                    <span className='productCart-quantity'>{`Amount: ${data?.quantity}`}</span>
+                    <span className='productCart-price'>{`Price: $${data?.price}`}</span>
+                </div>
             </header>
             <aside className='productCart-panel'>
-                <ShopButtons size={'large'} onClick={handleRemove}>Delete</ShopButtons>
-                <span className='productCart-quantity'>{data?.quantity}</span>
-                <span className='productCart-price'>{`$ ${data?.price}`}</span>
+                <ShopModifyButtons type={'delete'} onClick={handleRemove}><MdDeleteForever /></ShopModifyButtons>
             </aside>
         </article>
     )

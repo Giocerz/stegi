@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import '../ProductsShowcase/ProductShowcase.css'
+import '../../Components/ProductsShowcase/ProductShowcase.css'
 import './ProductPage.css'
 import { useEffect, useState } from "react";
-import { ShopButtons } from "../Buttons/ShopButtons";
+import { ShopButtons } from "../../Components/Buttons/ShopButtons";
 import { MdStar, MdStarHalf, MdStarBorder, MdArrowDownward, MdRocketLaunch} from "react-icons/md";
 import { useCart } from "../../Hooks/useCart";
 
@@ -41,7 +41,7 @@ function ProductPage() {
     const params = useParams();
     const [productData, setProductData] = useState();
     const [selectedQuantity, setSelectedQuantity] = useState('1');
-    const [rotateSelectArrow, setRotateSelectArrow] = useState('');
+    const [isSelectQuantity, setIsSelectQuantity] = useState(false);
     const { addToCart } = useCart();
 
     useEffect(() => {
@@ -95,7 +95,7 @@ function ProductPage() {
                     <section className='productPage-quantity'>
                         <label htmlFor="quantity">Quantity: </label>
                         <div className='productPage-quantity-select'>
-                            <select id="quantity" value={selectedQuantity} onChange={handleSelectQuantity} onClick={() =>  setRotateSelectArrow('rotate')} onBlur={() => setRotateSelectArrow('')}>
+                            <select id="quantity" value={selectedQuantity} onChange={handleSelectQuantity} onClick={() =>  setIsSelectQuantity(!isSelectQuantity)} onBlur={() => setIsSelectQuantity(false)}>
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
                                 <option value='3'>3</option>
@@ -103,7 +103,9 @@ function ProductPage() {
                                 <option value='5'>5</option>
                                 <option value='6'>6</option>
                             </select>
-                            <div className={`productPage-quantity-select-arrow ${rotateSelectArrow}`}><MdArrowDownward /></div>
+                            <div className={`productPage-quantity-select-arrow ${
+                                isSelectQuantity ? 'rotate' : ''
+                            }`}><MdArrowDownward /></div>
                         </div>
                     </section>
                     <section className='productPageInfo-btnContainer'>

@@ -18,3 +18,11 @@ export function ShopLinks({ children, size = '', toLink }) {
         </Link>
     )
 }
+
+export function ShopModifyButtons({ children, type, onClick }) {
+    return (
+        <button className={`modifyButtons ${type}`} onClick={onClick}>
+            {children}
+        </button>
+    )
+}

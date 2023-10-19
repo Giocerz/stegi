@@ -44,3 +44,20 @@
 .shopbuttons-btn.large, .shopbuttons-link.large {
     width: 70%;
 }
+
+.modifyButtons {
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+.modifyButtons.delete {
+    color: #f87887;
+    transition: color .3s ease;
+}
+
+.modifyButtons.delete:hover {
+    color: #ef233c;
+}
