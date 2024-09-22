@@ -31,7 +31,7 @@ function Header() {
                 <ul>
                     <li><a href='#first'>HOT SALE</a><div className='line'></div></li>
                     <li><a href='#second'>NEW SALE</a><div className='line'></div></li>
-                    <li><Link to='/cart'>EARRINGS</Link><div className='line'></div></li>
+                    <li><Link to='/cart'>CART</Link><div className='line'></div></li>
                 </ul>
             </nav>
             {searchBar && <section className='search-bar'></section>}
